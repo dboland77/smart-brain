@@ -24,7 +24,7 @@ class SignIn extends React.Component {
     onSubmitClick = (event) => {
       event.preventDefault();
       // request to backend
-      fetch('http://localhost:3000/signin', {
+      fetch('https://pure-scrubland-46035.herokuapp.com/signin', {
         method: 'POST',
         body: JSON.stringify({
           email: this.state.emailValue,
