@@ -10,6 +10,7 @@ import Register from './components/Register/Register.js'
 import DisplayError from './components/DisplayError/DisplayError.js'
 import './App.css';
 
+
 const particlesParams = {
 	particles: {
 		number: {
@@ -53,7 +54,7 @@ class App extends Component {
 	}
 
 	getProfile = (id) => {
-		fetch(`https://young-island-62643.herokuapp.com/profile/${Number(id)}`)
+		fetch(`http://localhost:3000/profile/${Number(id)}`)
 		.then(response => response.json())
 		.then(user => {
 			const currentUser = {
@@ -75,7 +76,7 @@ class App extends Component {
 
 	onButtonClick = () => {
 		// clarifai request
-		fetch('https://young-island-62643.herokuapp.com/apiRequest', {
+		fetch('http://localhost:3000/apiRequest', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -112,7 +113,7 @@ class App extends Component {
 						box: [...prevState.box, translatedCoordinatesObject]
 					}));
 					// increment number of entries
-					fetch('https://young-island-62643.herokuapp.com/image', {
+					fetch('http://localhost:3000/image', {
 						method: 'PUT',
 						body: JSON.stringify({
 							id: this.state.userData.id
