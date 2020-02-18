@@ -54,7 +54,7 @@ class App extends Component {
 	}
 
 	getProfile = (id) => {
-		fetch(`https://pure-scrubland-46035.herokuapp.com/profile/${Number(id)}`)
+		fetch(`https://daveboland-example-node-api.herokuapp.com/profile/${Number(id)}`)
 		.then(response => response.json())
 		.then(user => {
 			const currentUser = {
@@ -76,7 +76,7 @@ class App extends Component {
 
 	onButtonClick = () => {
 		// clarifai request
-		fetch('https://pure-scrubland-46035.herokuapp.com/apiRequest', {
+		fetch('https://daveboland-example-node-api.herokuapp.com/apiRequest', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -113,7 +113,7 @@ class App extends Component {
 						box: [...prevState.box, translatedCoordinatesObject]
 					}));
 					// increment number of entries
-					fetch('https://pure-scrubland-46035.herokuapp.com/image', {
+					fetch('https://daveboland-example-node-api.herokuapp.com/image', {
 						method: 'PUT',
 						body: JSON.stringify({
 							id: this.state.userData.id
