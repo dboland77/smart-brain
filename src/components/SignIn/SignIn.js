@@ -2,6 +2,9 @@ import React from 'react';
 import DisplayError from '../DisplayError/DisplayError.js';
 import './SignIn.css';
 
+const HerokuURL = 'https://daveboland-example-node-api.herokuapp.com'
+// const HerokuURL = 'http://localhost:3002'
+
 class SignIn extends React.Component {
 
     constructor(props) {
@@ -24,7 +27,7 @@ class SignIn extends React.Component {
     onSubmitClick = (event) => {
       event.preventDefault();
       // request to backend
-      fetch('https://daveboland-example-node-api.herokuapp.com/signin', {
+      fetch(HerokuURL + '/signin', {
         method: 'POST',
         body: JSON.stringify({
           email: this.state.emailValue,

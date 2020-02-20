@@ -1,6 +1,9 @@
 import React from 'react';
 import DisplayError from '../DisplayError/DisplayError.js';
 
+const HerokuURL = 'https://daveboland-example-node-api.herokuapp.com'
+//const HerokuURL = 'http://localhost:3002'
+
 class Register extends React.Component{
   
   constructor(props) {
@@ -27,7 +30,7 @@ class Register extends React.Component{
 
   onRegisterSubmit = (event) => {
     event.preventDefault();
-    fetch('https://daveboland-example-node-api.herokuapp.com/register', {
+    fetch(HerokuURL + '/register', {
       method: 'POST',
       body: JSON.stringify({
         name: this.state.nameValue,

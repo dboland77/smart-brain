@@ -11,6 +11,9 @@ import DisplayError from './components/DisplayError/DisplayError.js'
 import './App.css';
 
 
+const HerokuURL = 'https://daveboland-example-node-api.herokuapp.com'
+//const HerokuURL = 'http://localhost:3002'
+
 const particlesParams = {
 	particles: {
 		number: {
@@ -54,7 +57,7 @@ class App extends Component {
 	}
 
 	getProfile = (id) => {
-		fetch(`https://daveboland-example-node-api.herokuapp.com/profile/${Number(id)}`)
+		fetch(HerokuURL + `/profile/${Number(id)}`)
 		.then(response => response.json())
 		.then(user => {
 			const currentUser = {
@@ -76,7 +79,7 @@ class App extends Component {
 
 	onButtonClick = () => {
 		// clarifai request
-		fetch('https://daveboland-example-node-api.herokuapp.com/apiRequest', {
+		fetch(HerokuURL + '/apiRequest', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -113,7 +116,7 @@ class App extends Component {
 						box: [...prevState.box, translatedCoordinatesObject]
 					}));
 					// increment number of entries
-					fetch('https://daveboland-example-node-api.herokuapp.com/image', {
+					fetch(HerokuURL +'/image', {
 						method: 'PUT',
 						body: JSON.stringify({
 							id: this.state.userData.id
