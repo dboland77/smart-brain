@@ -11,8 +11,8 @@ import DisplayError from './components/DisplayError/DisplayError.js'
 import './App.css';
 
 
-//const HerokuURL = 'https://daveboland-example-node-api.herokuapp.com'
-const HerokuURL = 'http://localhost:3002'
+const HerokuURL = 'https://daveboland-example-node-api.herokuapp.com'
+// const HerokuURL = 'http://localhost:3002'
 
 const particlesParams = {
 	particles: {
