@@ -1,8 +1,8 @@
 import React from 'react';
 import DisplayError from '../DisplayError/DisplayError.js';
 
-const HerokuURL = 'https://daveboland-example-node-api.herokuapp.com'
-// const HerokuURL = 'http://localhost:3002'
+//const HerokuURL = 'https://daveboland-example-node-api.herokuapp.com'
+const HerokuURL = 'http://localhost:3002'
 
 class Register extends React.Component{
   
@@ -44,7 +44,7 @@ class Register extends React.Component{
     .then(response => response.json())
     .then(data => {
       console.log(data)
-      if (data === "success") {
+      if (data.email === this.state.emailValue) {
         this.props.onRouteChange('signin');
       } else {
         this.setState({errorMessage: 'error'});
