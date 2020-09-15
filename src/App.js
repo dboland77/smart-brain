@@ -10,7 +10,7 @@ import Register from "./components/Register/Register.js";
 import DisplayError from "./components/DisplayError/DisplayError.js";
 import "./App.css";
 
-const HerokuURL = 'https://faceapp-backend-api.herokuapp.com/'
+const HerokuURL = 'https://faceapp-backend-api.herokuapp.com'
 //const HerokuURL = "http://localhost:3002";
 
 const particlesParams = {
