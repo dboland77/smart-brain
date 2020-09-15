@@ -10,8 +10,8 @@ import Register from "./components/Register/Register.js";
 import DisplayError from "./components/DisplayError/DisplayError.js";
 import "./App.css";
 
-//const HerokuURL = 'https://daveboland-example-node-api.herokuapp.com'
-const HerokuURL = "http://localhost:3002";
+const HerokuURL = 'https://faceapp-backend-api.herokuapp.com/'
+//const HerokuURL = "http://localhost:3002";
 
 const particlesParams = {
   particles: {
@@ -170,7 +170,7 @@ class App extends Component {
             />
           ) : // if route is register
           this.state.route === "register" ? (
-            <Register onRouteChange={this.onRouteChange} />
+            <Register onRouteChange={this.onRouteChange} HerokuURL={HerokuURL}/>
           ) : (
             // if route is home
             <div>
