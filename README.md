@@ -1,20 +1,35 @@
-# smart-brain-app
-Full stack JavaScript SPA, done with React.js, Node.js, PostgreSQL, using Clarify API and deployed on Heroku.
+## Smart Brain App
+This is the front-end for the <a href="https://github.com/dboland77/Faceapp_backend_API">smart brain application.</a>
 
-Test the appp here:
-https://dave-face-recognition-app.herokuapp.com/
+Smart Brain is a web app that uses the Clarifai API to locate a face in a picture. Using a React.js front-end and Node.js back-end with Express.js as well as a PostgreSQL database to keep track of how many entries a user has made.
 
-Features:
+<a href="https://dave-face-recognition-app.herokuapp.com/">Check it out on Heroku</a>
 
-- Register: Validates inputs. Name should have at least 2 characters, password at least 3 and email should contain @ and . characters. If values are valid, and the email does not exist, they are stored in a database, encrypting the password. If register fails, an error message is displayed.
+![picture of the app](https://github.com/dboland77/FaceApp_Backend_API/blob/master/App_Demo.png)
 
-- Sigin: Validates inputs. Checks if user-password paid exists in database. If sign in succeeds, the corresponding user profile is displayed, otherwise an arror message is displayed.
+## Technologies Used
+### Front-End
+* HTML5
+* CSS3
+* React.js
 
-- Face recognition: Once the profile is displayed, the user can enter the url of an image. If the image contains human faces, the user entries are incremented by the number of the recognised faces. If the url is not valid, an error message is displayed. Face detection is done using Clarifai API.
+### Back-End
+* Node.js
+* Express.js
+* PostgreSQL
 
-If you want to see the backend API, see the repository:
-https://github.com/dboland77/Faceapp_backend_API
+### NPM Packages
+* Create-React-App
+* Tachyons
+* react-tilt
+* particles.js
+* Bcrypt
+* Postgresql
+* knex
+* body parser
+* cors
+* express
 
-Future developments:
-
-- Make the application responsive (especially on mobile devices)
+### APIs
+* <a href="https://clarifai.com/models/face-detection-image-recognition-model-a403429f2ddf4b49b307e318f00e528b-detection">Clarifai</a>
+* <a href="https://github.com/dboland77/smart-brain">Smart Brain repo</a>
