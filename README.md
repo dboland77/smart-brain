@@ -15,20 +15,18 @@ Smart Brain is a web app that uses the Clarifai API to locate a face in a pictur
 
 ### Back-End
 * Node.js
-* Express.js
-* PostgreSQL
+
 
 ### NPM Packages
 * Create-React-App
+* Express
+* CORS
 * Tachyons
 * react-tilt
 * particles.js
 * Bcrypt
-* Postgresql
-* knex
-* body parser
-* cors
-* express
+* pg (Postgresql)
+
 
 ### APIs
 * <a href="https://clarifai.com/models/face-detection-image-recognition-model-a403429f2ddf4b49b307e318f00e528b-detection">Clarifai</a>
